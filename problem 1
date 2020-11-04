@@ -1,0 +1,12 @@
+def getNthBinaryNumberWithKOnes(k,N):
+    start = 2**(N-1)
+    b_no = 0
+    flag = True
+    while flag:
+        b_no = bin(start).replace('0b','')
+        if k == list(b_no).count('1'):
+             flag = False
+        start +=1
+    return b_no
+    
+    getNthBinaryNumberWithKOnes(5,8)
